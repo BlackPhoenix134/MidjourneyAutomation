@@ -50,7 +50,7 @@ async def imagine_queue_loop():
         if not imagine_queue.empty():
             prompt = imagine_queue.get()    
             print(f"starting '{prompt}' from queue, sleeping 5 seconds")
-            time.sleep(5)
+            time.sleep(5) #rate limit prevention
             await do_imagine(free_channel, prompt)
 
 @bot.event
