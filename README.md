@@ -1,5 +1,8 @@
-.env file should contain
-BOT_TOKEN = "Token of your bot"
+
+# Midjourney Automation
+
+.env should contain\
+BOT_TOKEN = "Token of your bot"\
 RELAY_TOKEN = "Token of the user that has a running midjourney subscription"
 
 currently works for the second tier with 3 concurrent jobs
