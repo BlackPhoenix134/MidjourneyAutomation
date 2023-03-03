@@ -43,7 +43,7 @@ async def command_queue_loop():
         imagine_queue.put(data)
         print(f"Enqueued '{data}' at pos '{imagine_queue.qsize()}'")
 
-@tasks.loop(seconds = 30) #rate limit prevention
+@tasks.loop(seconds = 10) #rate limit prevention
 async def imagine_queue_loop():
     free_channels = get_free_storage_units()
     for free_channel in free_channels:
