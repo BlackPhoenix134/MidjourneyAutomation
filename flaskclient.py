@@ -25,7 +25,7 @@ class Thread3(threading.Thread):
         sys.settrace(tracer)
         super()._bootstrap()
 
-partial_run = partial(app.run, host="10.144.177.198", port=80, debug=True, use_reloader=False)
+partial_run = partial(app.run, host="0.0.0.0", port=80, debug=True, use_reloader=False)
 
 @app.route("/")
 async def hello():
